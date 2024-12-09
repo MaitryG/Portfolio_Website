@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+:root{
+    --text-color: #fff;
+    --color: #f52cf9;
+    --bg-color: #2d2d2d;
+    --first: #fff;
+    --second: #000;
+    --mob-color: #363636;
+    --box-bg: #333;
+    --clr-bg: #3e3e3e;
+    --place-clr: #afafaf;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+.container{
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90px;
+    width: 100%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo{
+        z-index: 1;
+
+        a {
+            text-decoration: none;
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--first);
+            
+            span {
+                color: var(--color);
+            }
+        }   
+    }
+
+    .list-darkmode-menu{
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 35px;
+            font-size: 18px;
+            list-style: none;
+            z-index: 1;
+
+            li{
+                a{
+                    position: relative;
+                    text-decoration: none;
+                    color: var(--first);
+                    font-size: 18px;
+                    font-weight: 500;
+                    font-size: 18px;
+                    transition: .3s ease;
+    
+                    &:hover{
+                        color: var(--color);
+    
+                        &::before{
+                            width: 100%;
+                        }
+                    }
+    
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: -7px;
+                        left: 0;
+                        width: 0;
+                        height: 2.5px;
+                        background-color: var(--color);
+                        transition: .3s ease;
+    
+                    }
+                }
+    
+            }
+
+        }
+        
+        
+        
+    }
+
+}
